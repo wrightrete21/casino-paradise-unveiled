@@ -1,0 +1,142 @@
+
+/* Custom styles beyond Tailwind */
+
+/* Hero Section Countdown */
+.countdown-item {
+    @apply bg-white/10 backdrop-blur-sm px-5 py-3 rounded-lg text-white flex flex-col items-center min-w-20 border border-white/20;
+}
+
+.countdown-number {
+    @apply text-2xl md:text-3xl font-bold mb-1;
+}
+
+.countdown-label {
+    @apply text-xs uppercase tracking-wider text-white/80;
+}
+
+/* Buttons */
+.btn-primary {
+    @apply inline-flex items-center justify-center px-6 py-3 rounded-lg bg-casino-gold text-black font-medium hover:bg-yellow-500 transition-colors shadow-lg hover:shadow-xl transform hover:-translate-y-1 duration-300;
+}
+
+.btn-secondary {
+    @apply inline-flex items-center justify-center px-6 py-3 rounded-lg bg-white/20 backdrop-blur-sm text-white font-medium hover:bg-white/30 transition-colors shadow-md border border-white/30;
+}
+
+.btn-gold {
+    @apply inline-flex items-center justify-center px-6 py-3 rounded-lg bg-gradient-to-r from-yellow-600 via-yellow-500 to-yellow-600 text-black font-medium hover:from-yellow-500 hover:to-yellow-500 transition-colors shadow-lg;
+}
+
+.btn-gold-sm {
+    @apply inline-flex items-center justify-center px-4 py-2 rounded-lg bg-gradient-to-r from-yellow-600 via-yellow-500 to-yellow-600 text-black font-medium hover:from-yellow-500 hover:to-yellow-500 transition-colors shadow-lg;
+}
+
+.btn-outline {
+    @apply inline-flex items-center justify-center px-6 py-3 rounded-lg bg-transparent border border-casino-gold text-casino-gold font-medium hover:bg-casino-gold hover:text-black transition-colors;
+}
+
+/* Form Inputs */
+.form-input {
+    @apply px-4 py-2 border border-gray-300 rounded-lg w-full focus:outline-none focus:ring-2 focus:ring-casino-gold focus:border-transparent transition-all;
+}
+
+/* Feature Cards */
+.feature-card {
+    @apply bg-white p-6 rounded-xl shadow-md border border-gray-100 text-center transition-transform duration-300 hover:-translate-y-2;
+}
+
+.feature-icon {
+    @apply w-16 h-16 mx-auto flex items-center justify-center bg-gray-50 rounded-full;
+}
+
+/* Casino Cards */
+.casino-detail-btn {
+    @apply w-full px-4 py-2 rounded bg-gray-100 text-gray-700 hover:bg-casino-gold hover:text-black transition-colors font-medium text-center;
+}
+
+/* Events Countdown */
+.event-countdown {
+    @apply text-casino-gold text-sm font-medium;
+}
+
+.event-countdown span {
+    @apply font-bold text-base mx-1;
+}
+
+/* FAQ Accordion */
+.faq-item {
+    @apply border border-gray-200 rounded-lg overflow-hidden;
+}
+
+.faq-question {
+    @apply w-full flex justify-between items-center p-5 text-left font-medium focus:outline-none;
+}
+
+.faq-question[aria-expanded="true"] {
+    @apply bg-gray-50;
+}
+
+.faq-question[aria-expanded="true"] i {
+    @apply rotate-180;
+}
+
+.faq-answer {
+    @apply px-5 pb-5 pt-0 hidden;
+}
+
+.faq-answer.active {
+    @apply block;
+}
+
+/* Social Icons */
+.social-icon {
+    @apply w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-casino-gold hover:text-black transition-colors;
+}
+
+/* Modal Styling */
+.modal-close {
+    @apply absolute top-4 right-4 w-8 h-8 flex items-center justify-center rounded-full bg-gray-100 text-gray-500 hover:bg-gray-200 transition-colors;
+}
+
+/* Custom animations */
+@keyframes pulse-gold {
+    0%, 100% {
+        box-shadow: 0 0 0 0 rgba(212, 175, 55, 0.7);
+    }
+    50% {
+        box-shadow: 0 0 0 10px rgba(212, 175, 55, 0);
+    }
+}
+
+.pulse-animation {
+    animation: pulse-gold 2s infinite;
+}
+
+/* Spinner Animation */
+.spinner i {
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Tailwind Custom Colors */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    :root {
+        --casino-gold: 43 55% 52%;
+        --casino-dark: 220 30% 10%;
+        --casino-red: 350 64% 38%;
+        --casino-blue: 215 50% 25%;
+        --casino-cream: 60 33% 94%;
+    }
+}
